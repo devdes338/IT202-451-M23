@@ -11,10 +11,18 @@ function bePositive($arr) {
     //hint: may want to use var_dump() to show final data types
     for($num=0;$num<count($arr);$num++){
         if($arr[$num]<0){
-            $arr[$num]*=-1;
+            $temp1 = $arr[$num];
+            $temp2 = $arr[$num]*1;
+            $new = $arr[$num]*-1;
+            if($temp1!==$temp2){
+                $new = (string)$new;
+            }
+            $arr[$num]=$new;
         }
     }
     echo var_dump($arr);
+    //drd38 06/04/2023
+    
 }
 echo "Problem 3: Be Positive<br>";
 ?>

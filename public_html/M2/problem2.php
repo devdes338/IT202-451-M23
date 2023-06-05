@@ -11,7 +11,9 @@ function getTotal($arr) {
     foreach($arr as $num){
         $total+=$num;
     }
+    $total = round($total,2);
     echo "The total is " . var_export($total, true);
+    //drd38 06/04/2023
 }
 echo "Problem 2: Adding Floats<br>";
 ?>
