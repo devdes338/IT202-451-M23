@@ -1,10 +1,10 @@
-## Project Name: (Which Project)
-### Project Summary: (Copy from proposal)
-### Github Link: (Prod Branch of Project Folder)
+## Project Name: Simple Shop
+### Project Summary: This project will create a simple e-commerce site for users.
+### Github Link: https://github.com/devdes338/IT202-451-M23/tree/prod
 ### Project Board Link: 
-### Website Link: (Heroku Prod of Project folder)
+### Website Link: https://drd38-prod.herokuapp.com/Project
 ### API Link: (the link to the documentation of your chosen API)
-### Your Name:
+### Your Name: Devan Desai
 
  
  
