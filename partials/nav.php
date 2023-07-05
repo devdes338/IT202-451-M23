@@ -1,5 +1,6 @@
 <?php
 //Note: this is to resolve cookie issues with port numbers
+require_once(__DIR__ . "/../lib/functions.php");
 $domain = $_SERVER["HTTP_HOST"];
 if (strpos($domain, ":")) {
     $domain = explode(":", $domain)[0];
@@ -20,9 +21,10 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
     ]);
 }
 session_start();
-require_once(__DIR__ . "/../lib/functions.php");
 
 ?>
+<link rel="stylesheet" href="styles.css" />
+<script src="helpers.js"></script>
 <nav>
     <ul>
         <?php if (is_logged_in()) : ?>
