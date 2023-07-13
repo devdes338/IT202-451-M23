@@ -15,7 +15,11 @@
 }
 nav li{display: inline; background-color: rebeccapurple;}
 nav li a{color: hotpink}
-input{border-radius: 50%;}
+input{
+    background-color:lightgray;
+    border:none;
+    border-bottom: 2px solid green;
+}
 body{
     background-color: lightgray;
     color: rgb(153, 0, 153);
