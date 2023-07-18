@@ -13,8 +13,10 @@
 .alert-info {
     background-color: teal;
 }
-nav li{display: inline; background-color: rebeccapurple;}
-nav li a{color: hotpink}
+nav li{display: inline; background-color: lightgray;}
+nav li a{
+    color: green
+}
 input{
     background-color:lightgray;
     border:none;
@@ -22,6 +24,6 @@ input{
 }
 body{
     background-color: lightgray;
-    color: rgb(153, 0, 153);
+    color: black;
 
 }

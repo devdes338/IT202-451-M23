@@ -121,11 +121,37 @@ $username = get_username();
 
 <script>
     function validate(form) {
+        let email = form.email.value;
+        let username = form.username.value;
+        let currentpw = form.currentPassword.value;
         let pw = form.newPassword.value;
         let con = form.confirmPassword.value;
         let isValid = true;
         //TODO add other client side validation....
-
+        if(email == ""){
+            flash("Email must not be empty", "warning");
+            isValid = false;
+        }
+        if(!/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/.test(email)){
+            flash("Invalid email address", "warning");
+            isValid = false;
+        }
+        if(!/^[a-z0-9_-]{3,16}$/.test(username)){
+            flash("Username must only contain 3-16 characters a-z, 0-9, _, or -", "warning");
+            isValid = false;
+        }
+        if(currentpw == ""){
+            flash("Password must not be empty", "warning");
+            isValid = false;
+        }
+        if(pw == ""){
+            flash("New password must not be empty", "warning");
+            isValid = false;
+        }
+        if(con == ""){
+            flash("Confirm password must not be empty", "warning");
+            isValid = false;
+        }
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
