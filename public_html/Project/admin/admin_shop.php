@@ -43,7 +43,12 @@ try {
                     </div>
                     <div class="card-footer">
                         Cost: <?php se($item, "cost"); ?>
-                        <button onclick="purchase('<?php se($item, 'id'); ?>')" class="btn btn-primary">Buy Now</button>
+                        <form method="POST" action="/../Project/cart.php">
+                            <input type="hidden" name="product_id" value="<?php se($item, "id");?>"/>
+                            <input type="hidden" name="action" value="add"/>
+                            <input type="number" name="quantity" value="1" min="1" max="<?php se($item,"stock");?>"/>
+                            <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                        </form>
                     </div>
                 </div>
             </div>
