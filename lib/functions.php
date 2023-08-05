@@ -23,4 +23,12 @@ require(__DIR__ . "/duplicate_user_details.php");
 require(__DIR__ . "/reset_session.php");
 
 require(__DIR__ . "/get_url.php");
+
+//get columns
+require(__DIR__ . "/get_columns.php");
+//save data
+require(__DIR__ . "/save_data.php");
+require(__DIR__ . "/update_data.php");
+//map SQL fields to input field types
+require(__DIR__ . "/input_map.php");
 ?>
