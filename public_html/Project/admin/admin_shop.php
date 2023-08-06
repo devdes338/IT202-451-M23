@@ -40,6 +40,7 @@ try {
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <p class="card-text"><a href="edit_item.php?id=<?php se($item, "id"); ?>">Edit</a></p>
+                        <a href="/../Project/product_details.php?id=<?php se($item, "id"); ?>">Details</a>
                     </div>
                     <div class="card-footer">
                         Cost: <?php se($item, "cost"); ?>

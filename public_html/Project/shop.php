@@ -36,6 +36,7 @@ try {
                     <div class="card-body">
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
+                        <a href="product_details.php?id=<?php se($item, "id"); ?>">Details</a>
                     </div>
                     <div class="card-footer">
                         Cost: <?php se($item, "cost"); ?>
