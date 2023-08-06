@@ -52,6 +52,7 @@ if (isset($_POST["itemName"])) {
 
                     <td>
                         <a href="edit_item.php?id=<?php se($record, "id"); ?>">Edit</a>
+                        <a href="/../Project/product_details.php?id=<?php se($record, "id"); ?>">Details</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

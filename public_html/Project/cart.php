@@ -109,6 +109,7 @@ try {
                         <input type="hidden" name="action" value="delete" />
                         <input type="submit" class="btn btn-danger" value="x" />
                     </form>
+                    <a href="product_details.php?id=<?php se($c, "unit_price"); ?>">Details</a>
                 </td>
             </tr>
         <?php endforeach; ?>
