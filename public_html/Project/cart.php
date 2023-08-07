@@ -109,7 +109,7 @@ try {
                         <input type="hidden" name="action" value="delete" />
                         <input type="submit" class="btn btn-danger" value="x" />
                     </form>
-                    <a href="product_details.php?id=<?php se($c, "unit_price"); ?>">Details</a>
+                    <a href="product_details.php?id=<?php se($c, "product_id"); ?>">Details</a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -120,6 +120,16 @@ try {
         <?php endif; ?>
         <tr>
             <td colspan="100%">Total: <?php se($total, null, 0); ?></td>
+            <td>
+                <form method="POST">
+                    <?php $count=0; foreach($cart as $c) : ?>
+                        <input type="hidden" name="cart_id" value="<?php se($c,"id");?>" />
+                        <?php $count++; ?>
+                    <?php endforeach; ?>
+                        <input type="hidden" name="action" value="delete" />
+                        <input type="submit" class="btn btn-danger" value="Clear Cart" />
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>

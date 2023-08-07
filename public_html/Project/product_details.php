@@ -24,35 +24,27 @@ try {
   <div class="row">
     <div class="col">
       Product 
-      <?php
-        echo($result["name"]);
-      ?>
+      <?php se($result, "name");?>
     </div>
     <div class="col">
       Description
-      <?php
-        echo($result["description"]);
-      ?>
+      <?php se($result,"description");?>
     </div>
   </div>
   <div class="row">
     <div class="col">
       Price
-      <?php
-        echo($result["cost"]);
-      ?>
+      <div>
+        <?php $price = $result["cost"]; $price=(float)$price; $price=$price/100; echo($price);?>
+    </div>
     </div>
     <div class="col">
       Stock
-      <?php
-        echo($result["stock"]);
-      ?>
+      <?php se($result,"stock");?>
     </div>
     <div class="col">
       Category
-      <?php
-        echo($result["category"]);
-      ?>
+      <?php se($result,"category");?>
     </div>
   </div>
 </div>
