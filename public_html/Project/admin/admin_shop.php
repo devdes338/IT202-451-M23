@@ -177,7 +177,7 @@ function check_apply_disabled_next($page)
                         <a href="/../Project/product_details.php?id=<?php se($item, "id"); ?>">Details</a>
                     </div>
                     <div class="card-footer">
-                        Cost: <?php se($item, "cost"); ?>
+                        Cost: $<?php $price = $item["cost"]; $price=(float)$price; $price=$price/100; echo($price);?>
                         <form method="POST" action="/../Project/cart.php">
                             <input type="hidden" name="product_id" value="<?php se($item, "id");?>"/>
                             <input type="hidden" name="action" value="add"/>

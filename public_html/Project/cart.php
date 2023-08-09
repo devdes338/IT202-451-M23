@@ -57,7 +57,7 @@ if (!empty($action)) {
             break;
     }
 }
-$query = "SELECT cart.id, product.stock, product.name, cart.unit_price, (cart.unit_price * cart.quantity) as subtotal, cart.quantity
+$query = "SELECT cart.id, product.stock, product.id as product_id, product.name, cart.unit_price, (cart.unit_price * cart.quantity) as subtotal, cart.quantity
 FROM Products as product JOIN Cart as cart on product.id = cart.product_id
  WHERE cart.user_id = :uid";
 $db = getDB();
@@ -102,7 +102,7 @@ try {
                     </form>
                 </td>
                 <?php $total += (int)se($c, "subtotal", 0, false); ?>
-                <td><?php se($c, "subtotal"); ?></td>
+                <td>$<?php $price = $c["subtotal"]; $price=(float)$price; $price=$price/100; echo($price);?></td>
                 <td>
                     <form method="POST">
                         <input type="hidden" name="cart_id" value="<?php se($c, "id"); ?>" />
@@ -119,7 +119,7 @@ try {
             </tr>
         <?php endif; ?>
         <tr>
-            <td colspan="100%">Total: <?php se($total, null, 0); ?></td>
+            <td colspan="100%">Total: $<?php $price=(float)$total;$price=$price/100; echo($price); ?></td>
             <td>
                 <form method="POST">
                     <?php $count=0; foreach($cart as $c) : ?>
