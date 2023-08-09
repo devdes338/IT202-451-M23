@@ -59,7 +59,7 @@ try {
 
 //Pagination
 $page = se($_GET, "page", 1, false); //default to page 1 (human readable number)
-$per_page = 3; //how many items to show per page (hint, this could also be something the user can change via a dropdown or similar)
+$per_page = 10; //how many items to show per page (hint, this could also be something the user can change via a dropdown or similar)
 $offset = ($page - 1) * $per_page;
 $query .= " LIMIT :offset, :count";
 $params[":offset"] = $offset;
